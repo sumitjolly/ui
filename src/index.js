@@ -1,9 +1,9 @@
 import React from "react";
-
-import { Checkbox as SUICheckbox } from "@infinitecsolutions/semantic-ui-react";
+// import { Checkbox as SUIRCheckbox } from "@infinitecsolutions/semantic-ui-react";
+// import "./index.less";
 
 const Checkbox = () => {
-  return <SUICheckbox checked={true} />;
+  return <h1>My beautiful component</h1>;
 };
 
 export default Checkbox;

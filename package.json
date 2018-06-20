@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
+    "build": "webpack -p",
     "transpile": "babel src -d dist --copy-files",
     "prepublishOnly": "npm run transpile"
   },
@@ -16,6 +17,10 @@
     "react-dom": "^16.3.0"
   },
   "devDependencies": {
+    "@infinitecsolutions/semantic-ui-less": "2.2.14",
+    "@infinitecsolutions/semantic-ui-less-module-loader": "1.0.0",
+    "@infinitecsolutions/semantic-ui-react": "^0.81.1",
+    "@material-ui/core": "^1.2.3",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
@@ -23,6 +28,9 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.11",
     "html-webpack-plugin": "^3.2.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "style-loader": "^0.21.0",
@@ -30,7 +38,5 @@
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.4"
   },
-  "dependencies": {
-    "@infinitecsolutions/semantic-ui-react": "^0.81.1"
-  }
+  "dependencies": {}
 }
