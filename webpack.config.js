@@ -23,8 +23,8 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     library: libraryName,
     filename: "[name]",
-    libraryTarget: "commonjs",
-    umdNamedDefine: true
+    libraryTarget: "commonjs"
+    // umdNamedDefine: true
   },
   module: {
     rules: [
