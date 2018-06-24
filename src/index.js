@@ -1,9 +1,2 @@
-import React from "react";
-
-import { Checkbox as SUICheckbox } from "@infinitecsolutions/semantic-ui-react";
-
-const Checkbox = () => {
-  return <SUICheckbox checked={true} />;
-};
-
-export default Checkbox;
+export { default as Button } from "./components/Button";
+export { default as Checkbox } from "./components/Checkbox";
