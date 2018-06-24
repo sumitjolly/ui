@@ -6,16 +6,24 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
 });
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const libraryName = "library";
-const outputFile = libraryName + ".js";
+const glob = require("glob");
+
+function getEntries(pattern) {
+  const entries = {};
+  glob.sync(pattern).forEach(file => {
+    entries[file.replace("src/", "")] = path.join(__dirname, file);
+  });
+  return entries;
+}
 
 module.exports = {
-  entry: path.join(__dirname, "src/index.js"),
+  entry: getEntries("src/**/*.js"),
+  // entry: path.join(__dirname, "src/index.js"),
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: outputFile,
-    publicPath: "/dist",
     library: libraryName,
-    libraryTarget: "umd",
+    filename: "[name]",
+    libraryTarget: "commonjs",
     umdNamedDefine: true
   },
   module: {
@@ -24,7 +32,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         use: "babel-loader",
         exclude: /node_modules/
-      }
+      },
       // {
       //   test: /\.less$/i,
       //   // include: /[/\\]node_modules[/\\]@infinitecsolutions[/\\]semantic-ui-less[/\\]/,
@@ -79,10 +87,10 @@ module.exports = {
       //   //   ]
       //   // })
       // },
-      // {
-      //   test: /\.css$/,
-      //   use: ["style-loader", "css-loader"]
-      // }
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      }
     ]
   },
   plugins: [

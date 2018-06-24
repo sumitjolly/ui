@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --mode development",
     "build": "webpack -p",
     "transpile": "babel src -d dist --copy-files",
-    "prepublishOnly": "npm run transpile"
+    "prepublishOnly": "npm run build"
   },
   "author": "Hugo Nogueira <hugomn@gmail.com>",
   "license": "MIT",
