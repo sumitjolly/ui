@@ -1,9 +1,8 @@
 import React from "react";
-// import { Checkbox as SUIRCheckbox } from "@infinitecsolutions/semantic-ui-react";
-// import "./index.less";
+import { Checkbox as SUIRCheckbox } from "@infinitecsolutions/semantic-ui-react";
 
-const Checkbox = () => {
-  return <h1>My beautiful component</h1>;
+const Checkbox = props => {
+  return <SUIRCheckbox {...props} />;
 };
 
 export default Checkbox;

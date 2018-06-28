@@ -1,8 +1,8 @@
 import React from "react";
-// import "./index.less";
+import { Button as SUIRButton } from "@infinitecsolutions/semantic-ui-react";
 
-const Button = () => {
-  return <h2>My button</h2>;
+const Button = props => {
+  return <SUIRButton {...props} />;
 };
 
 export default Button;
