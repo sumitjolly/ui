@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf dist/* && npm run build:css && npm run build:js",
-    "build:css": "webpack --config='config/webpack.config.css.js'",
+    "build:css": "node scripts/build.css.js",
     "build:js": "rollup --config config/rollup.config.js",
     "prepublishOnly": "npm run build",
     "start": "npm run storybook",
