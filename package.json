@@ -9,6 +9,7 @@
     "build:css": "rm -rf dist/* && webpack --config='config/webpack.config.css.js'",
     "build:js": "rollup --config config/rollup.config.js",
     "prepublishOnly": "npm run build",
+    "start": "npm run storybook",
     "storybook": "start-storybook -p 6006",
     "deploy-storybook": "storybook-to-ghpages --remote=storybook --branch=master --output-dir=../storybook-temp"
   },
