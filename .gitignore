@@ -1,2 +1,6 @@
 node_modules
 dist
+docs/src/componentInfo
+docs/src/componentMenu.json
+docs/src/exampleMenus
+docs/dist/
