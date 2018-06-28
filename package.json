@@ -10,7 +10,7 @@
     "build:js": "rollup --config config/rollup.config.js",
     "prepublishOnly": "npm run build",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "deploy-storybook": "storybook-to-ghpages --remote=storybook --branch=master --output-dir=../storybook-temp"
   },
   "author": "Hugo Nogueira <hugomn@gmail.com>",
   "license": "MIT",
@@ -31,6 +31,7 @@
     "@infinitecsolutions/semantic-ui-less": "2.3.2",
     "@infinitecsolutions/semantic-ui-less-module-loader": "1.0.0",
     "@infinitecsolutions/semantic-ui-react": "^0.81.1",
+    "@infinitecsolutions/storybook-deployer": "^2.3.0",
     "@storybook/addon-actions": "^4.0.0-alpha.10",
     "@storybook/addon-info": "^4.0.0-alpha.10",
     "@storybook/addon-knobs": "^4.0.0-alpha.10",

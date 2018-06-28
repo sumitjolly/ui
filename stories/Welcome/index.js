@@ -1,7 +1,7 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes } from "react";
 
 export default class Welcome extends React.Component {
-  showApp = (e) => {
+  showApp = e => {
     e.preventDefault();
     if (this.props.showApp) this.props.showApp();
   };
@@ -9,7 +9,7 @@ export default class Welcome extends React.Component {
   render() {
     return (
       <div>
-        <h1>Welcome to Infinitec&apos;s Storybook</h1>
+        <h1>Welcome to Infinitec&apos;s UI Storybook</h1>
         <p>This is a UI component dev environment for the component library.</p>
         <p>
           Stories are originating from the <code>/stories</code> directory.
@@ -19,10 +19,10 @@ export default class Welcome extends React.Component {
           (Basically a story is like a visual test case.)
         </p>
         <p>
-          See these sample{' '}
+          See these sample{" "}
           <a href="#" onClick={this.showApp}>
             stories
-          </a>{' '}
+          </a>{" "}
           for a component called <code>Button</code>.
         </p>
         <p>
@@ -30,7 +30,8 @@ export default class Welcome extends React.Component {
           <br />
           You can also edit those components and see changes right away.
           <br />
-          (Try editing the <code>Button</code> component located at <code>src/stories/button.stories.js</code>.)
+          (Try editing the <code>Button</code> component located at{" "}
+          <code>src/stories/button.stories.js</code>.)
         </p>
       </div>
     );
