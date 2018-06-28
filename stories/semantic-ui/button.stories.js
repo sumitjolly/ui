@@ -1,15 +1,17 @@
-import React, { Fragment } from 'react';
-import { storiesOf } from '@storybook/react';
-import { Divider, Grid, Button } from '@infinitecsolutions/semantic-ui-react';
-import { withKnobs, select, text, boolean } from '@storybook/addon-knobs/react';
-import { withInfo } from '@storybook/addon-info';
+import React, { Fragment } from "react";
+import { storiesOf } from "@storybook/react";
+import { Divider, Grid, Button } from "@infinitecsolutions/semantic-ui-react";
+import { withKnobs, select, text, boolean } from "@storybook/addon-knobs/react";
+import { withInfo } from "@storybook/addon-info";
 
-const stories = storiesOf('Semantic-UI/Button', module);
+const stories = storiesOf("Semantic-UI/Button", module);
 
-stories.addDecorator((story, context) => withInfo({ propTablesExclude: [Grid, Grid.Column, Divider] })(story)(context));
+stories.addDecorator((story, context) =>
+  withInfo({ propTablesExclude: [Grid, Grid.Column, Divider] })(story)(context)
+);
 stories.addDecorator(withKnobs);
 
-stories.add('Button', () => (
+stories.add("Button", () => (
   <Fragment>
     <Grid>
       <Grid.Column>
@@ -86,11 +88,11 @@ stories.add('Button', () => (
   </Fragment>
 ));
 
-stories.add('Buttons Props', () => {
+stories.add("Buttons Props", () => {
   const GROUP_IDS = {
-    TYPES: 'TYPES',
-    VARIATIONS: 'VARIATIONS',
-    STATES: 'STATES',
+    TYPES: "TYPES",
+    VARIATIONS: "VARIATIONS",
+    STATES: "STATES"
   };
 
   return (
@@ -98,52 +100,84 @@ stories.add('Buttons Props', () => {
       <Grid>
         <Grid.Column>
           <Button
-            disabled={boolean('disabled', false, GROUP_IDS.STATES)}
-            loading={boolean('loading', false, GROUP_IDS.STATES)}
+            disabled={boolean("disabled", false, GROUP_IDS.STATES)}
+            loading={boolean("loading", false, GROUP_IDS.STATES)}
             size={select(
-              'size',
-              ['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive'],
-              'medium',
+              "size",
+              [
+                "mini",
+                "tiny",
+                "small",
+                "medium",
+                "large",
+                "big",
+                "huge",
+                "massive"
+              ],
+              "medium",
               GROUP_IDS.VARIATIONS
             )}
-            fluid={boolean('fluid', false, GROUP_IDS.VARIATIONS)}
+            fluid={boolean("fluid", false, GROUP_IDS.VARIATIONS)}
           >
             Default
           </Button>
           <Button
             primary
-            disabled={boolean('disabled', false, GROUP_IDS.STATES, 'test')}
-            loading={boolean('loading', false, GROUP_IDS.STATES)}
+            disabled={boolean("disabled", false, GROUP_IDS.STATES, "test")}
+            loading={boolean("loading", false, GROUP_IDS.STATES)}
             size={select(
-              'size',
-              ['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive'],
-              'medium',
+              "size",
+              [
+                "mini",
+                "tiny",
+                "small",
+                "medium",
+                "large",
+                "big",
+                "huge",
+                "massive"
+              ],
+              "medium",
               GROUP_IDS.VARIATIONS
             )}
-            fluid={boolean('fluid', false, GROUP_IDS.VARIATIONS)}
-            compact={boolean('compact', false, GROUP_IDS.VARIATIONS)}
+            fluid={boolean("fluid", false, GROUP_IDS.VARIATIONS)}
+            compact={boolean("compact", false, GROUP_IDS.VARIATIONS)}
           >
             Primary
           </Button>
           <Button
             secondary
-            disabled={boolean('disabled', false, GROUP_IDS.STATES)}
-            loading={boolean('loading', false, GROUP_IDS.STATES)}
+            disabled={boolean("disabled", false, GROUP_IDS.STATES)}
+            loading={boolean("loading", false, GROUP_IDS.STATES)}
             size={select(
-              'size',
-              ['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive'],
-              'medium',
+              "size",
+              [
+                "mini",
+                "tiny",
+                "small",
+                "medium",
+                "large",
+                "big",
+                "huge",
+                "massive"
+              ],
+              "medium",
               GROUP_IDS.VARIATIONS
             )}
-            fluid={boolean('fluid', false, GROUP_IDS.VARIATIONS)}
+            fluid={boolean("fluid", false, GROUP_IDS.VARIATIONS)}
           >
             Secondary
           </Button>
           <Divider />
           <Button
             primary
-            floated={select('floated', ['left', 'right'], 'left', GROUP_IDS.VARIATIONS)}
-            content={text('content', 'Long long long Text')}
+            floated={select(
+              "floated",
+              ["left", "right"],
+              "left",
+              GROUP_IDS.VARIATIONS
+            )}
+            content={text("content", "Long long long Text")}
           />
         </Grid.Column>
       </Grid>
