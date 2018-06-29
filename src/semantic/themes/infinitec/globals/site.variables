@@ -20,6 +20,12 @@
 @importGoogleFonts: false;
 
 /*-------------------
+    Border Radius
+--------------------*/
+
+@defaultBorderRadius: 0;
+
+/*-------------------
       Site Colors
 --------------------*/
 
@@ -121,6 +127,12 @@
 /* Used for differentiating layers */
 @subtleShadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.05);
 
+/*-------------------
+      Borders
+--------------------*/
+
+@borderColor               : rgba(238, 238, 238, 1);
+
 
 /*-------------------
         Grid
@@ -148,7 +160,16 @@
 @inputHorizontalPadding : @relative14px;
 @inputPadding           : @inputVerticalPadding @inputHorizontalPadding;
 
+/* Input Text Color */
+@inputPlaceholderColor: lighten(@inputColor, 50);
+@inputPlaceholderFocusColor: lighten(@inputColor, 50);
+
 /* Line Height Default For Inputs in Browser (Descendors are 23px at 14px base em) */
 @inputLineHeight: unit((21 / 14), em);
 
-@defaultBorderRadius: 0px;
+/*-------------------
+    Focused Input
+--------------------*/
+
+/* Used on inputs, textarea etc */
+@focusedFormBorderColor: @checkColor;
