@@ -1,6 +1,6 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
-const ruleSemanticLess = require("../config/webpack.rule.semanticLess.js");
+const getSemanticLessRule = require("../config/webpack.rule.semanticLess.js");
 
 module.exports = {
   plugins: [new MiniCssExtractPlugin({})],
@@ -8,7 +8,7 @@ module.exports = {
     rules: [
       {
         oneOf: [
-          ruleSemanticLess,
+          getSemanticLessRule("finavi"),
           {
             test: /\.css$/i,
             use: [MiniCssExtractPlugin.loader, "css-loader"]

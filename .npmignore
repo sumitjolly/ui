@@ -1,5 +1,6 @@
-src
 config
+scripts
+src
 .babelrc
 .gitignore
 .prettierignore

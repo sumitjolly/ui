@@ -4,7 +4,6 @@ export { default as Divider } from "./components/Divider";
 export { default as Dropdown } from "./components/Dropdown";
 export { default as Form } from "./components/Form";
 export { default as Grid } from "./components/Grid";
-export { default as Input } from "./components/Input";
 export { default as Item } from "./components/Item";
 export { default as Modal } from "./components/Modal";
 export { default as Popup } from "./components/Popup";

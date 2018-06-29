@@ -1,8 +1,7 @@
 import React from "react";
 import { withInfo } from "@storybook/addon-info";
-import { Checkbox } from "@infinitecsolutions/semantic-ui-react";
 import { storiesOf } from "@storybook/react";
-import { Dropdown } from "@infinitecsolutions/ui";
+import { Dropdown } from "../../components/Dropdown";
 
 const stories = storiesOf("Semantic-UI/Dropdown", module);
 const options = [

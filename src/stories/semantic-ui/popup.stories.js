@@ -1,24 +1,28 @@
-import React, { Fragment } from 'react';
-import { storiesOf } from '@storybook/react';
-import { Popup } from '@infinitecsolutions/semantic-ui-react';
-import { withInfo } from '@storybook/addon-info';
+import React, { Fragment } from "react";
+import { storiesOf } from "@storybook/react";
+import Popup from "../../components/Popup";
+import { withInfo } from "@storybook/addon-info";
 
-const stories = storiesOf('Semantic-UI/Popup', module);
+const stories = storiesOf("Semantic-UI/Popup", module);
 
 //stories.addDecorator(withKnobs);
 
 stories.add(
-  'Basic popup example with text in content (on hover)',
-  withInfo('A Popup displays additional information on top of a page.')(() => (
+  "Basic popup example with text in content (on hover)",
+  withInfo("A Popup displays additional information on top of a page.")(() => (
     <Fragment>
-      <Popup trigger={<div>What's cooking?</div>} content="Pasta with pizza sauce" on="hover" />
+      <Popup
+        trigger={<div>What's cooking?</div>}
+        content="Pasta with pizza sauce"
+        on="hover"
+      />
     </Fragment>
   ))
 );
 
 stories.add(
-  'Basic popup example with JSX content as markup (on click)',
-  withInfo('A Popup displays additional information on top of a page.')(() => (
+  "Basic popup example with JSX content as markup (on click)",
+  withInfo("A Popup displays additional information on top of a page.")(() => (
     <Fragment>
       <Popup
         trigger={<button>Hello</button>}
@@ -34,4 +38,4 @@ stories.add(
   ))
 );
 
-storiesOf('Popup', module);
+storiesOf("Popup", module);

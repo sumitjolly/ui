@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { storiesOf } from "@storybook/react";
-import { Divider, Grid, Button } from "@infinitecsolutions/semantic-ui-react";
+import { Divider, Grid, Button } from "../../";
 import { withKnobs, select, text, boolean } from "@storybook/addon-knobs/react";
 import { withInfo } from "@storybook/addon-info";
 
