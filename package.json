@@ -20,7 +20,6 @@
     "url": "git@github.com:infinitecsolutions/ui.git"
   },
   "peerDependencies": {
-    "@infinitecsolutions/semantic-ui-react": "^0.81.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
   },
@@ -59,5 +58,7 @@
     "webpack-cli": "^3.0.8",
     "webpack-omit-js-for-css-plugin": "^3.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@infinitecsolutions/semantic-ui-react": "^0.81.1"
+  }
 }

@@ -21,7 +21,7 @@ import "@infinitecsolutions/semantic-ui-less/definitions/elements/label.less";
 
 /* Collections */
 // import "@infinitecsolutions/semantic-ui-less/definitions/collections/breadcrumb.less";
-// import "@infinitecsolutions/semantic-ui-less/definitions/collections/form.less";
+import "@infinitecsolutions/semantic-ui-less/definitions/collections/form.less";
 import "@infinitecsolutions/semantic-ui-less/definitions/collections/grid.less";
 import "@infinitecsolutions/semantic-ui-less/definitions/collections/menu.less";
 // import "@infinitecsolutions/semantic-ui-less/definitions/collections/message.less";
@@ -32,7 +32,7 @@ import "@infinitecsolutions/semantic-ui-less/definitions/collections/menu.less";
 // import "@infinitecsolutions/semantic-ui-less/definitions/views/card.less";
 // import "@infinitecsolutions/semantic-ui-less/definitions/views/comment.less";
 // import "@infinitecsolutions/semantic-ui-less/definitions/views/feed.less";
-// import "@infinitecsolutions/semantic-ui-less/definitions/views/item.less";
+import "@infinitecsolutions/semantic-ui-less/definitions/views/item.less";
 // import "@infinitecsolutions/semantic-ui-less/definitions/views/statistic.less";
 
 /* Modules */
