@@ -3,11 +3,14 @@ import { storiesOf } from "@storybook/react";
 import { Divider, Grid, Button } from "../../";
 import { withKnobs, select, text, boolean } from "@storybook/addon-knobs/react";
 import { withInfo } from "@storybook/addon-info";
+import withTests from "../../../.storybook/withTests";
 
 const stories = storiesOf("Semantic-UI/Button", module);
 
 stories.addDecorator((story, context) =>
-  withInfo({ propTablesExclude: [Grid, Grid.Column, Divider] })(story)(context)
+  withTests(withInfo({ propTablesExclude: [Grid, Grid.Column, Divider] }))(
+    story
+  )(context)
 );
 stories.addDecorator(withKnobs);
 

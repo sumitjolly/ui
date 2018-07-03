@@ -5,4 +5,14 @@ const Form = props => {
   return <SUIRForm {...props} />;
 };
 
+Form.Field = SUIRForm.Field;
+Form.Button = SUIRForm.Button;
+Form.Checkbox = SUIRForm.Checkbox;
+Form.Dropdown = SUIRForm.Dropdown;
+Form.Group = SUIRForm.Group;
+Form.Input = SUIRForm.Input;
+Form.Radio = SUIRForm.Radio;
+Form.Select = SUIRForm.Select;
+Form.TextArea = SUIRForm.TextArea;
+
 export default Form;
