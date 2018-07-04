@@ -1,9 +1,9 @@
 import React from "react";
 import { withInfo } from "@storybook/addon-info";
 import { storiesOf } from "@storybook/react";
-import { Dropdown } from "../../components/Dropdown";
+import { Dropdown } from "../../src/components";
 
-const stories = storiesOf("Semantic-UI/Dropdown", module);
+const stories = storiesOf("Dropdown", module);
 const options = [
   { key: "css", text: "CSS", value: "css" },
   { key: "design", text: "Graphic Design", value: "design" },
@@ -24,8 +24,14 @@ const options = [
   { key: "ux", text: "User Experience", value: "ux" }
 ];
 
-stories.addDecorator((story, context) => withInfo()(story)(context));
-
-stories.add("Multiple selection", () => (
-  <Dropdown placeholder="Skills" multiple selection search options={options} />
+stories.addWithAddons("Inline", () => (
+  <span>
+    I'm skilled in{" "}
+    <Dropdown
+      inline
+      placeholder="Skills"
+      options={options}
+      defaultValue={options[0].value}
+    />
+  </span>
 ));

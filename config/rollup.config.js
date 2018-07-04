@@ -4,7 +4,7 @@ import pkg from "../package.json";
 
 export default [
   {
-    input: "src/index.js",
+    input: "src/components/index.js",
     output: {
       name: "infinitec-ui",
       file: pkg.main,

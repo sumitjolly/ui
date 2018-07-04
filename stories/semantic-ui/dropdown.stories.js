@@ -1,7 +1,6 @@
 import React from "react";
-import { withInfo } from "@storybook/addon-info";
 import { storiesOf } from "@storybook/react";
-import { Dropdown } from "../../components/Dropdown";
+import { Dropdown } from "../../src/components";
 
 const stateOptions = [
   {
@@ -13,9 +12,8 @@ const stateOptions = [
     text: "German"
   }
 ];
-const stories = storiesOf("Semantic-UI/Dropdown", module);
-stories.addDecorator((story, context) => withInfo()(story)(context));
+const stories = storiesOf("Dropdown", module);
 
-stories.add("Dropdown", () => (
+stories.addWithAddons("Dropdown", () => (
   <Dropdown placeholder="Language" selection options={stateOptions} />
 ));

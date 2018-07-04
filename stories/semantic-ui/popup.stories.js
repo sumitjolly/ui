@@ -1,28 +1,27 @@
 import React, { Fragment } from "react";
 import { storiesOf } from "@storybook/react";
-import Popup from "../../components/Popup";
+import { Popup } from "../../src/components";
 import { withInfo } from "@storybook/addon-info";
 
-const stories = storiesOf("Semantic-UI/Popup", module);
+const stories = storiesOf("Popup", module);
 
-//stories.addDecorator(withKnobs);
-
-stories.add(
+stories.addWithAddons(
   "Basic popup example with text in content (on hover)",
-  withInfo("A Popup displays additional information on top of a page.")(() => (
-    <Fragment>
+  () => (
+    <div style={{ padding: "0 20px" }}>
       <Popup
         trigger={<div>What's cooking?</div>}
         content="Pasta with pizza sauce"
         on="hover"
       />
-    </Fragment>
-  ))
+    </div>
+  ),
+  { centered: false }
 );
 
-stories.add(
+stories.addWithAddons(
   "Basic popup example with JSX content as markup (on click)",
-  withInfo("A Popup displays additional information on top of a page.")(() => (
+  () => (
     <Fragment>
       <Popup
         trigger={<button>Hello</button>}
@@ -35,7 +34,7 @@ stories.add(
         basic="true"
       />
     </Fragment>
-  ))
+  )
 );
 
 storiesOf("Popup", module);

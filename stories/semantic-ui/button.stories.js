@@ -1,20 +1,12 @@
 import React, { Fragment } from "react";
 import { storiesOf } from "@storybook/react";
-import { Divider, Grid, Button } from "../../";
-import { withKnobs, select, text, boolean } from "@storybook/addon-knobs/react";
+import { Divider, Grid, Button } from "../../src/components";
 import { withInfo } from "@storybook/addon-info";
-import withTests from "../../../.storybook/withTests";
+import { select, text, boolean } from "@storybook/addon-knobs/react";
 
-const stories = storiesOf("Semantic-UI/Button", module);
+const stories = storiesOf("Button", module);
 
-stories.addDecorator((story, context) =>
-  withTests(withInfo({ propTablesExclude: [Grid, Grid.Column, Divider] }))(
-    story
-  )(context)
-);
-stories.addDecorator(withKnobs);
-
-stories.add("Button", () => (
+stories.addWithAddons("Button", () => (
   <Fragment>
     <Grid>
       <Grid.Column>
@@ -82,16 +74,17 @@ stories.add("Button", () => (
         </Button>
 
         <Divider />
-
-        <Button primary fluid>
-          Fit to container
-        </Button>
+        <div style={{ padding: "40px" }}>
+          <Button primary fluid>
+            Fit to container
+          </Button>
+        </div>
       </Grid.Column>
     </Grid>
   </Fragment>
 ));
 
-stories.add("Buttons Props", () => {
+stories.addWithAddons("Buttons Props", () => {
   const GROUP_IDS = {
     TYPES: "TYPES",
     VARIATIONS: "VARIATIONS",
@@ -172,16 +165,18 @@ stories.add("Buttons Props", () => {
             Secondary
           </Button>
           <Divider />
-          <Button
-            primary
-            floated={select(
-              "floated",
-              ["left", "right"],
-              "left",
-              GROUP_IDS.VARIATIONS
-            )}
-            content={text("content", "Long long long Text")}
-          />
+          <div style={{ padding: "0 40px" }}>
+            <Button
+              primary
+              floated={select(
+                "floated",
+                ["left", "right"],
+                "left",
+                GROUP_IDS.VARIATIONS
+              )}
+              content={text("content", "Long long long Text")}
+            />
+          </div>
         </Grid.Column>
       </Grid>
     </React.Fragment>
