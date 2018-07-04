@@ -60,7 +60,7 @@
     "storybook-readme": "^3.3.0",
     "webpack": "^4.12.0",
     "webpack-cli": "^3.0.8",
-    "webpack-omit-js-for-css-plugin": "^3.0.1"
+    "webpack-omit-js-for-css-plugin": "^3.1.0"
   },
   "dependencies": {
     "@infinitecsolutions/semantic-ui-react": "^0.81.1"
