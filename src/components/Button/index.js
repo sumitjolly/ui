@@ -5,4 +5,6 @@ const Button = props => {
   return <SUIRButton {...props} />;
 };
 
+Button.displayName = "Button";
+
 export default Button;
