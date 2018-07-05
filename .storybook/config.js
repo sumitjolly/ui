@@ -17,11 +17,11 @@ function loadStories() {
 
 const stylesDecorator = story => {
   const styles = {
-    background: "#e1ecfa",
+    background: "#fafafa",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    height: "300px"
+    height: "200px"
   };
   return <div style={styles}>{story}</div>;
 };
@@ -32,7 +32,6 @@ setAddon({
       addInfo: true,
       addStyles: true,
       addTests: true,
-      centered: true,
       ...opts
     };
     this.add(storyName, context => {
@@ -40,16 +39,13 @@ setAddon({
       if (options.addStyles) {
         storyResult = stylesDecorator(storyResult);
       }
+      if (options.addInfo) {
+        storyResult = withInfo()(() => storyResult, context);
+      }
       if (options.addTests) {
         storyResult = withTests(jestTestResults, {
           filesExt: ".test.js"
         })(storyName)(() => storyResult, context);
-      }
-      if (options.centered) {
-        storyResult = <div style={{ textAlign: "center" }}>{storyResult}</div>;
-      }
-      if (options.addInfo) {
-        storyResult = withInfo()(() => storyResult, context);
       }
       return storyResult;
     });

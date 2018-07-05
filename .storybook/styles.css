@@ -12,6 +12,12 @@ body {
     url("../src/assets/finavi/fonts/sme.svg?1xvqup#sme") format("svg");
 }
 
+.sb-main > div > div > div {
+  border: none !important;
+  padding: 0px 40px !important;
+  margin-bottom: 30px !important;
+}
+
 code {
   font-size: 15px;
   font-weight: 600;
