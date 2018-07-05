@@ -1,7 +1,7 @@
 import React from "react";
 import { configure, addDecorator, setAddon } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import { withKnobs, select, text, boolean } from "@storybook/addon-knobs/react";
+import { withKnobs } from "@storybook/addon-knobs/react";
 import { setOptions } from "@storybook/addon-options";
 import { setDefaults } from "@storybook/addon-info";
 import jestTestResults from "../.jest-test-results.json";
@@ -30,13 +30,16 @@ setAddon({
   addWithAddons(storyName, storyFn, opts) {
     const options = {
       addInfo: true,
+      addStyles: true,
       addTests: true,
       centered: true,
       ...opts
     };
     this.add(storyName, context => {
       let storyResult = storyFn();
-      storyResult = stylesDecorator(storyResult);
+      if (options.addStyles) {
+        storyResult = stylesDecorator(storyResult);
+      }
       if (options.addTests) {
         storyResult = withTests(jestTestResults, {
           filesExt: ".test.js"
@@ -65,7 +68,7 @@ setDefaults({
 
 setOptions({
   name: "Infinitec Solutions UI",
-  url: "#",
+  url: "https://github.com/infinitecsolutions/uio",
   showStoriesPanel: true,
   showAddonPanel: true,
   addonPanelInRight: true,

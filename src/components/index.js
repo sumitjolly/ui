@@ -8,5 +8,6 @@ export { default as Item } from "./Item";
 export { default as Input } from "./Input";
 export { default as Modal } from "./Modal";
 export { default as Popup } from "./Popup";
+export { default as Search } from "./Search";
 export { default as TextArea } from "./TextArea";
 export { default as Transition } from "./Transition";
