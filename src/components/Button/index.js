@@ -6,5 +6,6 @@ const Button = props => {
 };
 
 Button.displayName = "Button";
+Button.propTypes = SUIRButton.propTypes;
 
 export default Button;
