@@ -1,10 +1,9 @@
 import React from "react";
 import { configure, addDecorator, setAddon } from "@storybook/react";
-import { addInfo, withInfo } from "@storybook/addon-info";
+import { withInfo } from "@storybook/addon-info";
 import { withKnobs, select, text, boolean } from "@storybook/addon-knobs/react";
 import { setOptions } from "@storybook/addon-options";
 import { setDefaults } from "@storybook/addon-info";
-import centered from "@storybook/addon-centered";
 import jestTestResults from "../.jest-test-results.json";
 import withTests from "storybook-addon-jest";
 import "../src/semantic/index.js";
@@ -16,6 +15,17 @@ function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
 
+const stylesDecorator = story => {
+  const styles = {
+    background: "#e1ecfa",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: "300px"
+  };
+  return <div style={styles}>{story}</div>;
+};
+
 setAddon({
   addWithAddons(storyName, storyFn, opts) {
     const options = {
@@ -26,10 +36,11 @@ setAddon({
     };
     this.add(storyName, context => {
       let storyResult = storyFn();
+      storyResult = stylesDecorator(storyResult);
       if (options.addTests) {
         storyResult = withTests(jestTestResults, {
           filesExt: ".test.js"
-        })(storyName)(storyFn, context);
+        })(storyName)(() => storyResult, context);
       }
       if (options.centered) {
         storyResult = <div style={{ textAlign: "center" }}>{storyResult}</div>;

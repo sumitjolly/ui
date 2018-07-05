@@ -31,6 +31,7 @@
     "@infinitecsolutions/semantic-ui-less": "2.3.2",
     "@infinitecsolutions/semantic-ui-less-module-loader": "1.0.0",
     "@infinitecsolutions/storybook-deployer": "^2.3.0",
+    "@sambego/storybook-styles": "^1.0.0",
     "@storybook/addon-actions": "^4.0.0-alpha.10",
     "@storybook/addon-centered": "^3.4.8",
     "@storybook/addon-info": "^4.0.0-alpha.10",
