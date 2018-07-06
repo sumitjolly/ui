@@ -13,39 +13,26 @@ stories.addWithAddons("Button", () => {
   };
 
   return (
-    <Grid>
-      <Grid.Column>
-        <Button
-          primary={boolean("primary", true, GROUP_IDS.VARIATIONS)}
-          secondary={boolean("secondary", false, GROUP_IDS.VARIATIONS)}
-          loading={boolean("loading", false, GROUP_IDS.STATES)}
-          disabled={boolean("disabled", false, GROUP_IDS.STATES)}
-          loading={boolean("loading", false, GROUP_IDS.STATES)}
-          size={select(
-            "size",
-            [
-              "mini",
-              "tiny",
-              "small",
-              "medium",
-              "large",
-              "big",
-              "huge",
-              "massive"
-            ],
-            "medium",
-            GROUP_IDS.VARIATIONS
-          )}
-          floated={select(
-            "floated",
-            ["left", "right"],
-            "left",
-            GROUP_IDS.VARIATIONS
-          )}
-          content={text("content", "Hello, button!")}
-          fluid={boolean("fluid", false, GROUP_IDS.VARIATIONS)}
-        />
-      </Grid.Column>
-    </Grid>
+    <Button
+      primary={boolean("primary", true, GROUP_IDS.VARIATIONS)}
+      secondary={boolean("secondary", false, GROUP_IDS.VARIATIONS)}
+      loading={boolean("loading", false, GROUP_IDS.STATES)}
+      disabled={boolean("disabled", false, GROUP_IDS.STATES)}
+      loading={boolean("loading", false, GROUP_IDS.STATES)}
+      size={select(
+        "size",
+        ["mini", "tiny", "small", "medium", "large", "big", "huge", "massive"],
+        "medium",
+        GROUP_IDS.VARIATIONS
+      )}
+      floated={select(
+        "floated",
+        ["left", "right"],
+        "left",
+        GROUP_IDS.VARIATIONS
+      )}
+      content={text("content", "Hello, button!")}
+      fluid={boolean("fluid", false, GROUP_IDS.VARIATIONS)}
+    />
   );
 });

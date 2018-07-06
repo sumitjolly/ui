@@ -18,6 +18,14 @@ body {
   margin-bottom: 30px !important;
 }
 
+.sb-main > div > div:nth-child(2) {
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
 code {
   font-size: 15px;
   font-weight: 600;

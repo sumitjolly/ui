@@ -1,4 +1,3 @@
-import React from "react";
 import { configure, addDecorator, setAddon } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { withKnobs } from "@storybook/addon-knobs/react";
@@ -15,30 +14,15 @@ function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
 
-const stylesDecorator = story => {
-  const styles = {
-    background: "#fafafa",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    height: "200px"
-  };
-  return <div style={styles}>{story}</div>;
-};
-
 setAddon({
   addWithAddons(storyName, storyFn, opts) {
     const options = {
       addInfo: true,
-      addStyles: true,
       addTests: true,
       ...opts
     };
     this.add(storyName, context => {
       let storyResult = storyFn();
-      if (options.addStyles) {
-        storyResult = stylesDecorator(storyResult);
-      }
       if (options.addInfo) {
         storyResult = withInfo()(() => storyResult, context);
       }
