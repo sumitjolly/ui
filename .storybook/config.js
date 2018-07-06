@@ -1,6 +1,8 @@
 import { configure, addDecorator, setAddon } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { withKnobs } from "@storybook/addon-knobs/react";
+import { withSmartKnobs } from "storybook-addon-smart-knobs";
+import { withReadme } from "storybook-readme";
 import { setOptions } from "@storybook/addon-options";
 import { setDefaults } from "@storybook/addon-info";
 import jestTestResults from "../.jest-test-results.json";
@@ -11,6 +13,7 @@ import "./styles.css";
 // automatically import all files ending in *.stories.js
 const req = require.context("../stories", true, /.stories.js$/);
 function loadStories() {
+  require("../stories/index.stories.js");
   req.keys().forEach(filename => req(filename));
 }
 
@@ -18,6 +21,7 @@ setAddon({
   addWithAddons(storyName, storyFn, opts) {
     const options = {
       addInfo: true,
+      addReadme: true,
       addTests: true,
       ...opts
     };
@@ -31,11 +35,17 @@ setAddon({
           filesExt: ".test.js"
         })(storyName)(() => storyResult, context);
       }
+      if (options.addReadme) {
+        const readme = require(`../stories/${storyName}/README.md`);
+        storyResult = withReadme(readme)(() => storyResult, context);
+      }
       return storyResult;
     });
   }
 });
 
+// addDecorator(withReadme(README));
+addDecorator(withSmartKnobs);
 addDecorator(withKnobs);
 
 setDefaults({

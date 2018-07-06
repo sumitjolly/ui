@@ -14,6 +14,6 @@ Search.Category = Category;
 Search.Result = Result;
 Search.Results = Results;
 
-Search.PropTypes = SUIRSearch.PropTypes;
+Search.propTypes = SUIRSearch.propTypes;
 
 export default Search;

@@ -7,7 +7,7 @@ import "@infinitecsolutions/semantic-ui-less/definitions/elements/button.less";
 import "@infinitecsolutions/semantic-ui-less/definitions/elements/container.less";
 import "@infinitecsolutions/semantic-ui-less/definitions/elements/divider.less";
 // import "@infinitecsolutions/semantic-ui-less/definitions/elements/flag.less";
-// import "@infinitecsolutions/semantic-ui-less/definitions/elements/header.less";
+import "@infinitecsolutions/semantic-ui-less/definitions/elements/header.less";
 // import "@infinitecsolutions/semantic-ui-less/definitions/elements/icon.less";
 import "@infinitecsolutions/semantic-ui-less/definitions/elements/image.less";
 import "@infinitecsolutions/semantic-ui-less/definitions/elements/input.less";

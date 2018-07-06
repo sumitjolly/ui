@@ -24,6 +24,18 @@ const options = [
   { key: "ux", text: "User Experience", value: "ux" }
 ];
 
-stories.addWithAddons("Multiple selection", () => (
-  <Dropdown placeholder="Skills" multiple selection search options={options} />
-));
+stories.addWithAddons(
+  "Inline",
+  () => (
+    <span>
+      I'm skilled in{" "}
+      <Dropdown
+        inline
+        placeholder="Skills"
+        options={options}
+        defaultValue={options[0].value}
+      />
+    </span>
+  ),
+  { addReadme: false }
+);

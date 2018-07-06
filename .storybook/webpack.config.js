@@ -14,14 +14,26 @@ module.exports = {
             use: [MiniCssExtractPlugin.loader, "css-loader"]
           },
           {
+            test: /\.md$/,
+            use: [
+              // {
+              //   loader: "html-loader"
+              // },
+              {
+                loader: "markdown-loader"
+              }
+            ]
+          },
+          {
             exclude: [
               /\.js$/,
               /\.ejs$/,
               /\.html$/,
               /\.json$/,
               /\.config$/,
-              /\.variables/,
-              /\.overrides/
+              /\.variables$/,
+              /\.overrides$/,
+              /\.md$/
             ],
             loader: "file-loader",
             options: {

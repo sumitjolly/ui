@@ -16,7 +16,7 @@ stories.addWithAddons(
       />
     </div>
   ),
-  { centered: false }
+  { centered: false, addReadme: false }
 );
 
 stories.addWithAddons(
@@ -34,7 +34,8 @@ stories.addWithAddons(
         basic="true"
       />
     </Fragment>
-  )
+  ),
+  { addReadme: false }
 );
 
 storiesOf("Popup", module);
