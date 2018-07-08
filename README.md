@@ -1,6 +1,6 @@
 # @infinitecsolutions/ui
 
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![CircleCI](https://circleci.com/gh/infinitecsolutions/ui.svg?style=svg)](https://circleci.com/gh/infinitecsolutions/ui) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 Infinitec Solutions official UI library! 👨🏻‍🎨
 
