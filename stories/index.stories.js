@@ -10,5 +10,5 @@ storiesOf("Welcome", module).addWithAddons(
       <Welcome showApp={linkTo("Semantic-UI/Button")} />
     </div>
   ),
-  { addInfo: false, addStyles: false, addTests: false }
+  { addInfo: false, addTests: false, addReadme: false }
 );

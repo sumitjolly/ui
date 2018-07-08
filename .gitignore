@@ -6,3 +6,4 @@ docs/src/componentMenu.json
 docs/src/exampleMenus
 docs/dist/
 .jest-test-results.json
+storybook-static
