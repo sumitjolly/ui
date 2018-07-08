@@ -40,7 +40,7 @@
     "@storybook/addon-options": "^4.0.0-alpha.10",
     "@storybook/addons": "^4.0.0-alpha.10",
     "@storybook/react": "^4.0.0-alpha.10",
-    "babel-core": "^6.26.3",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.2.0",
     "babel-loader": "^8.0.0-beta.4",
     "babel-runtime": "^6.26.0",
@@ -67,6 +67,11 @@
     "webpack-omit-js-for-css-plugin": "^3.1.0"
   },
   "dependencies": {
-    "@infinitecsolutions/semantic-ui-react": "^0.81.1"
+    "@infinitecsolutions/semantic-ui-react": "^0.81.1",
+    "prop-types": "^15.6.2"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }

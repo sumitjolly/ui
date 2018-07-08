@@ -10,11 +10,7 @@ export default [
       file: pkg.main,
       format: "cjs"
     },
-    external: [
-      "react",
-      "react-proptypes",
-      "@infinitecsolutions/semantic-ui-react"
-    ],
+    external: ["react", "prop-types", "@infinitecsolutions/semantic-ui-react"],
     plugins: [
       resolve(),
       babel({
