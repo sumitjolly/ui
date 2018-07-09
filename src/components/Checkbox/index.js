@@ -6,7 +6,6 @@ const Checkbox = props => {
   return <SUIRCheckbox {...props} />;
 };
 
-Checkbox.displayName = "Checkbox";
 Checkbox.propTypes = {
   /** Whether or not checkbox is checked. */
   checked: PropTypes.bool,
@@ -29,5 +28,7 @@ Checkbox.propTypes = {
   /** Format to show an on or off choice. */
   toggle: PropTypes.bool
 };
+
+Checkbox.displayName = "Checkbox";
 
 export default Checkbox;

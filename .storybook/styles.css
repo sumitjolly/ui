@@ -1,7 +1,3 @@
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
 @font-face {
   font-family: "sme";
   font-weight: normal;
@@ -12,7 +8,7 @@ body {
     url("../src/assets/finavi/fonts/sme.svg?1xvqup#sme") format("svg");
 }
 
-.sb-main > div > div > div {
+.sb-main > div > div:not(:nth-child(2)) > div {
   border: none !important;
   padding: 0px 40px !important;
   margin-bottom: 30px !important;
@@ -24,6 +20,47 @@ body {
   align-items: center;
   justify-content: center;
   height: 200px;
+}
+
+.storySummary {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 20px 0;
+  color: #24292e;
+  font-size: 16px;
+}
+
+.proptypesTable {
+  font-size: 90%;
+  font-weight: 400;
+  margin-top: 25px;
+  border-width: 1px;
+  border-collapse: collapse;
+}
+
+.proptypesTable,
+.proptypesTable th,
+.proptypesTable td {
+  border: 1px solid rgb(238, 238, 238);
+  padding: 6px;
+}
+
+.proptypesTable .propName {
+  font-size: 87.5%;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  white-space: pre;
+  display: inline-block;
+  padding: 2px;
+  font-family: monospace, monospace;
+  border: 0px;
+}
+
+.proptypesTable th {
+  text-align: left;
+  padding-right: 8px;
 }
 
 code {

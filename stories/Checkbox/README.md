@@ -1,5 +1,3 @@
-## Checkbox
-
 Current Checkbox is forked from React Semantic UI.
 
 Check complete documentation here:<br/>

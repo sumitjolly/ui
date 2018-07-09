@@ -1,5 +1,3 @@
-## Button
-
 Current Infinitec UI Button is forked from React Semantic UI.
 
 Check complete documentation here:<br/>

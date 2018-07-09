@@ -2,11 +2,12 @@ import { configure, addDecorator, setAddon } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { withKnobs } from "@storybook/addon-knobs/react";
 import { withSmartKnobs } from "storybook-addon-smart-knobs";
-import { withReadme } from "storybook-readme";
 import { setOptions } from "@storybook/addon-options";
 import { setDefaults } from "@storybook/addon-info";
+import PropTypesTable from "./proptypes.table";
 import jestTestResults from "../.jest-test-results.json";
 import withTests from "storybook-addon-jest";
+import React from "react";
 import "../src/semantic/index.js";
 import "./styles.css";
 
@@ -18,27 +19,43 @@ function loadStories() {
 }
 
 setAddon({
-  addWithAddons(storyName, storyFn, opts) {
+  addWithAddons(component, storyFn, opts) {
     const options = {
       addInfo: true,
       addReadme: true,
       addTests: true,
+      description: `Default ${component.displayName}`,
+      name: component.displayName,
+      infoProps: {},
       ...opts
     };
-    this.add(storyName, context => {
+    this.add(options.description, context => {
       let storyResult = storyFn();
+
+      // Add info addon
       if (options.addInfo) {
-        storyResult = withInfo()(() => storyResult, context);
+        storyResult = withInfo({
+          TableComponent: PropTypesTable,
+          text: options.addReadme && (
+            <div
+              className="storySummary"
+              dangerouslySetInnerHTML={{
+                __html: require(`../stories/${options.name}/README.md`)
+              }}
+            />
+          ),
+          header: true,
+          ...options.infoProps
+        })(() => storyResult, context);
       }
+
+      // Add tests addon
       if (options.addTests) {
         storyResult = withTests(jestTestResults, {
           filesExt: ".test.js"
-        })(storyName)(() => storyResult, context);
+        })(options.name)(() => storyResult, context);
       }
-      if (options.addReadme) {
-        const readme = require(`../stories/${storyName}/README.md`);
-        storyResult = withReadme(readme)(() => storyResult, context);
-      }
+
       return storyResult;
     });
   }
@@ -58,7 +75,7 @@ setDefaults({
 
 setOptions({
   name: "Infinitec Solutions UI",
-  url: "https://github.com/infinitecsolutions/uio",
+  url: "https://github.com/infinitecsolutions/ui",
   showStoriesPanel: true,
   showAddonPanel: true,
   addonPanelInRight: true,

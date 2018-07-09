@@ -1,5 +1,3 @@
-## Modal
-
 Current Infinitec UI Modal is forked from React Semantic UI.
 
 Check complete documentation here:<br/>
