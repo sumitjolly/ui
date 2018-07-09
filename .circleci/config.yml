@@ -10,7 +10,7 @@ defaults: &defaults
     - image: circleci/node:8.9.1
 
 jobs:
-  build:
+  test:
     <<: *defaults
     steps:
       - checkout
@@ -39,7 +39,7 @@ jobs:
       - run: 
           name: Deploying test results to codecov.io
           command: bash <(curl -s https://codecov.io/bash)
-          
+
       - run:
           name: Add GitHub Pages remote
           command: git remote add storybook git@github.com:infinitecsolutions/infinitecsolutions.github.io.git
@@ -58,6 +58,28 @@ jobs:
       - run:
           name: Publish package
           command: npm publish
+
+workflows:
+  version: 2
+  test-deploy-publish:
+    jobs:
+      - test
+      - deploy:
+          requires:
+            - test
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
+      - publish:
+          requires:
+            - test
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
 
 
 
