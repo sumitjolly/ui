@@ -22,7 +22,9 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn install
+      - run: 
+          name: Install all npm dependencies
+          command: yarn install
 
       - save_cache:
           paths:
@@ -60,7 +62,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/repo
-          
+
       - run:
           name: Authenticate with registry
           command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
