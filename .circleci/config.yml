@@ -82,11 +82,11 @@ workflows:
       - publish:
           requires:
             - test
-          # filters:
-          #   tags:
-          #     only: /^v.*/
-          #   branches:
-          #     ignore: /.*/
+          filters:
+            tags:
+              only: /^v[0-9]+*/
+            branches:
+              ignore: /.*/
 
 
 
