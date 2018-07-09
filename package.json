@@ -1,6 +1,6 @@
 {
   "name": "@infinitecsolutions/ui",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Infinitec Solutions UI library",
   "main": "dist/index.js",
   "scripts": {
