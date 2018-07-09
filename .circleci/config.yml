@@ -32,19 +32,14 @@ jobs:
       - run: 
           name: Running Jest tests
           command: yarn test
-
+  
+  deploy:
+    <<: *defaults
+    steps:
       - run: 
           name: Deploying test results to codecov.io
           command: bash <(curl -s https://codecov.io/bash)
-
-      - run:
-          name: Authenticate with registry
-          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
-
-      # - run:
-      #     name: Publish package
-      #     command: npm publish
-
+          
       - run:
           name: Add GitHub Pages remote
           command: git remote add storybook git@github.com:infinitecsolutions/infinitecsolutions.github.io.git
@@ -52,6 +47,17 @@ jobs:
       - run:
           name: Deploy story-book
           command: yarn deploy-storybook --ci
-        
+
+  publish: 
+    <<: *defaults
+    steps:
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+
+      - run:
+          name: Publish package
+          command: npm publish
+
 
 
