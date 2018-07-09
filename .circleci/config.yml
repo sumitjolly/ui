@@ -75,11 +75,16 @@ workflows:
   version: 2
   test-deploy-publish:
     jobs:
-      - test
+      - test:
+          filters:
+            tags:
+              only: /.*/
       - deploy:
           requires:
             - test
           filters:
+            tags:
+              only: /.*/
             branches:
               only: master
       - publish:
