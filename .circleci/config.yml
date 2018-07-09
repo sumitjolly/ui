@@ -79,14 +79,17 @@ workflows:
       - deploy:
           requires:
             - test
+          filters:
+            branches:
+              only: master
       - publish:
           requires:
             - test
           filters:
             tags:
-              only: /^v*/
+              only: /^v.*/
             branches:
-              ignore: /.*/
+              only: master
 
 
 
