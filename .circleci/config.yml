@@ -43,9 +43,9 @@ jobs:
           name: Publish package
           command: npm publish
 
-  # publish:
-  #     <<: *defaults
-  #     steps:
+      - run:
+          name: Deploy story-book
+          command: yarn deploy-storybook --ci
         
 
 
