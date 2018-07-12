@@ -1,11 +1,9 @@
 /*******************************
             Checkbox
 *******************************/
-
 @checkboxSize: 24px;
 @checkboxColor: @textColor;
 @checkboxLineHeight: @checkboxSize;
-
 
 /* Label */
 @labelDistance: 40px; /* 31px @ 14/em */
@@ -14,12 +12,10 @@
 @checkboxBackground: @white;
 @checkboxBorder: 2px solid @checkColor;
 @checkboxBorderRadius: 0px;
-@checkboxTransition:
-  border @defaultDuration @defaultEasing,
+@checkboxTransition: border @defaultDuration @defaultEasing,
   opacity @defaultDuration @defaultEasing,
   transform @defaultDuration @defaultEasing,
-  box-shadow @defaultDuration @defaultEasing
-;
+  box-shadow @defaultDuration @defaultEasing;
 
 /* Checkmark */
 @checkboxCheckFontSize: 14px;
@@ -104,10 +100,7 @@
 
 /* Slider & Toggle Handle */
 @handleBackground: @gray-light-2;
-@handleBoxShadow:
-  @subtleShadow,
-  0px 0px 0px 1px @borderColor inset
-;
+@handleBoxShadow: @subtleShadow, 0px 0px 0px 1px @borderColor inset;
 
 /* Slider */
 @sliderHandleSize: 1.5rem;
@@ -143,8 +136,6 @@
 @sliderOnFocusLineColor: @lightBlackFocus;
 @sliderOnFocusLabelColor: @sliderOnLabelColor;
 
-
-
 /* Toggle */
 @toggleHeight: 1.2rem;
 @toggleLaneWidth: 3.5rem;
@@ -154,10 +145,8 @@
 
 @toggleHandleRadius: @circularRadius;
 @toggleHandleOffset: 0.5rem;
-@toggleHandleTransition:
-  background @sliderTransitionDuration @defaultEasing,
-  left @sliderTransitionDuration @defaultEasing
-;
+@toggleHandleTransition: background @sliderTransitionDuration @defaultEasing,
+  left @sliderTransitionDuration @defaultEasing;
 
 @toggleLaneBackground: @gray-lighter;
 @toggleLaneHeight: @toggleHeight;
@@ -169,7 +158,6 @@
 @toggleLabelDistance: @toggleLaneWidth + 1rem;
 @toggleLabelLineHeight: 1.5rem;
 @toggleLabelOffset: 0.5em;
-
 
 @toggleFocusColor: @veryStrongTransparentBlack;
 @toggleHoverColor: @toggleFocusColor;
@@ -184,8 +172,6 @@
 
 @toggleOnFocusLaneColor: @lightPrimaryColor;
 @toggleOnFocusLabelColor: @toggleOnLabelColor;
-
-
 
 /*-------------------
       Variations
