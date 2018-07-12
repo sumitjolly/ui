@@ -5,7 +5,6 @@ import { withSmartKnobs } from "storybook-addon-smart-knobs";
 import { setOptions } from "@storybook/addon-options";
 import { setDefaults } from "@storybook/addon-info";
 import PropTypesTable from "./proptypes.table";
-import jestTestResults from "../.jest-test-results.json";
 import withTests from "storybook-addon-jest";
 import React from "react";
 import "../src/semantic/index.js";
@@ -50,10 +49,15 @@ setAddon({
       }
 
       // Add tests addon
-      if (options.addTests) {
-        storyResult = withTests(jestTestResults, {
-          filesExt: ".test.js"
-        })(options.name)(() => storyResult, context);
+      try {
+        const jestTestResults = require("../.jest-test-results.json");
+        if (options.addTests) {
+          storyResult = withTests(jestTestResults, {
+            filesExt: ".test.js"
+          })(options.name)(() => storyResult, context);
+        }
+      } catch (e) {
+        console.warn("Jest results file not found. Please run your tests.");
       }
 
       return storyResult;

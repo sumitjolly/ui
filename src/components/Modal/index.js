@@ -7,6 +7,7 @@ const Modal = props => {
 };
 
 Modal.Content = SUIRModal.Content;
+Modal.Content.displayName = "Modal.Content";
 Modal.Description = SUIRModal.Description;
 Modal.Header = SUIRModal.Header;
 
