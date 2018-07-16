@@ -15,4 +15,6 @@ Form.Radio = SUIRForm.Radio;
 Form.Select = SUIRForm.Select;
 Form.TextArea = SUIRForm.TextArea;
 
+Form.displayName = "Form";
+
 export default Form;
