@@ -5,4 +5,6 @@ const TextArea = props => {
   return <SUIRTextArea {...props} />;
 };
 
+TextArea.displayName = "TextArea";
+
 export default TextArea;
