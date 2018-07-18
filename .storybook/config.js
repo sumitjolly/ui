@@ -1,6 +1,6 @@
 import { configure, addDecorator, setAddon } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import { withKnobs } from "@storybook/addon-knobs/react";
+import { withKnobs } from '@storybook/addon-knobs'
 import { withSmartKnobs } from "storybook-addon-smart-knobs";
 import { setOptions } from "@storybook/addon-options";
 import { setDefaults } from "@storybook/addon-info";
