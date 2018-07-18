@@ -29,7 +29,7 @@ import "@infinitecsolutions/semantic-ui-less/definitions/collections/menu.less";
 
 /* Views */
 // import "@infinitecsolutions/semantic-ui-less/definitions/views/ad.less";
-// import "@infinitecsolutions/semantic-ui-less/definitions/views/card.less";
+import "@infinitecsolutions/semantic-ui-less/definitions/views/card.less";
 // import "@infinitecsolutions/semantic-ui-less/definitions/views/comment.less";
 // import "@infinitecsolutions/semantic-ui-less/definitions/views/feed.less";
 import "@infinitecsolutions/semantic-ui-less/definitions/views/item.less";
