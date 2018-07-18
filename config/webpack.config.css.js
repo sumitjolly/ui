@@ -12,7 +12,29 @@ module.exports = site => {
       filename: "index.js"
     },
     module: {
-      rules: [getSemanticLessRule(site)]
+      rules: [
+        {
+          oneOf: [
+            getSemanticLessRule(site),
+            {
+              exclude: [
+                /\.js$/,
+                /\.ejs$/,
+                /\.html$/,
+                /\.json$/,
+                /\.config$/,
+                /\.variables$/,
+                /\.overrides$/,
+                /\.md$/
+              ],
+              loader: "file-loader",
+              options: {
+                name: "static/media/[name].[hash:8].[ext]"
+              }
+            }
+          ]
+        }
+      ]
     },
     plugins: [
       new OmitJSforCSSPlugin(),
