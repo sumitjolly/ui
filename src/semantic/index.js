@@ -16,7 +16,7 @@ import "@infinitecsolutions/semantic-ui-less/definitions/elements/label.less";
 // import "@infinitecsolutions/semantic-ui-less/definitions/elements/loader.less";
 // import "@infinitecsolutions/semantic-ui-less/definitions/elements/rail.less";
 // import "@infinitecsolutions/semantic-ui-less/definitions/elements/reveal.less";
-// import "@infinitecsolutions/semantic-ui-less/definitions/elements/segment.less";
+import "@infinitecsolutions/semantic-ui-less/definitions/elements/segment.less";
 // import "@infinitecsolutions/semantic-ui-less/definitions/elements/step.less";
 
 /* Collections */
