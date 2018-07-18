@@ -8,9 +8,6 @@ const Input = props => {
 
 Input.propTypes = {
 
-  /** Primary content. */
-  children: PropTypes.node,
-
   /** Additional classes. */
   className: PropTypes.string,
 
