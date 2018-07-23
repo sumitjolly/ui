@@ -36,7 +36,7 @@ import "@infinitecsolutions/semantic-ui-less/definitions/views/item.less";
 // import "@infinitecsolutions/semantic-ui-less/definitions/views/statistic.less";
 
 /* Modules */
-// import "@infinitecsolutions/semantic-ui-less/definitions/modules/accordion.less";
+import "@infinitecsolutions/semantic-ui-less/definitions/modules/accordion.less";
 import "@infinitecsolutions/semantic-ui-less/definitions/modules/checkbox.less";
 import "@infinitecsolutions/semantic-ui-less/definitions/modules/dimmer.less";
 import "@infinitecsolutions/semantic-ui-less/definitions/modules/dropdown.less";
