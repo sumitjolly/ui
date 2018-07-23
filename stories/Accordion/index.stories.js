@@ -1,11 +1,11 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Accordion, Icon } from "../../src/components";
+import { Accordion } from "../../src/components";
+import { Icon } from "@infinitecsolutions/semantic-ui-react";
 
 const stories = storiesOf(Accordion.displayName, module);
 
 stories.addWithAddons(Accordion, () => {
-console.log(Accordion)
   return  (<Accordion>
     <Accordion.Title active={false} >
       <Icon name='dropdown' />
