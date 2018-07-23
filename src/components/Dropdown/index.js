@@ -1,10 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Dropdown as SUIRDropdown } from "@infinitecsolutions/semantic-ui-react";
+import { Dropdown as SUIRDropdown, DropdownItem, DropdownMenu } from "@infinitecsolutions/semantic-ui-react";
 
 const Dropdown = props => {
   return <SUIRDropdown {...props} />;
 };
+
+Dropdown.Item = DropdownItem;
+Dropdown.Menu = DropdownMenu;
 
 Dropdown.propTypes = {
   /** A dropdown can be formatted to appear inline in other content. */
