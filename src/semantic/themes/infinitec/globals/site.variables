@@ -6,15 +6,14 @@
         Paths
 --------------------*/
 
-@imagepath : "../../../themes/default/assets/images";
-@fontpath : "../../../themes/default/assets/fonts";
+@imagePath : "../../../themes/default/assets/images";
+@fontPath  : "../../../themes/default/assets/fonts";
 
 /*-------------------
        Fonts
 --------------------*/
 
-@fontName: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-  Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+@fontName: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 @fontSmoothing: antialiased;
 // Disable importing Google fonts because the fonts shall be packaged locally
 // (see site/global/site.overrides and https://github.com/Semantic-Org/Semantic-UI/issues/1521)
@@ -37,38 +36,38 @@
 @darkSecondaryColor: darken(@secondaryColor, 5%);
 
 /*---  Colors  ---*/
-@red : #B03060;
-@orange : #FE9A76;
-@yellow : #FFD700;
-@olive : #32CD32;
-@green : #016936;
-@teal : #008080;
-@blue : #0E6EB8;
-@violet : #EE82EE;
-@purple : #B413EC;
-@pink : #FF1493;
-@brown : #A52A2A;
-@grey : #A0A0A0;
-@black : #000000;
-@white : #FFFFFF;
+@red            : #B03060;
+@orange         : #FE9A76;
+@yellow         : #FFD700;
+@olive          : #32CD32;
+@green          : #016936;
+@teal           : #008080;
+@blue           : #0E6EB8;
+@violet         : #EE82EE;
+@purple         : #B413EC;
+@pink           : #FF1493;
+@brown          : #A52A2A;
+@grey           : #A0A0A0;
+@black          : #000000;
+@white            : #FFFFFF;
 
 @gray-darker: #222222;
 @gray-dark: #333333;
 @gray: #555555;
 @gray-light: #777777;
 @gray-light-2: #999999;
-@gray-lighter: #eeeeee;
-@gray-lightest: #f9f9f9;
+@gray-lighter: #EEEEEE;
+@gray-lightest: #F9F9F9;
 
 /*---  Light Colors  ---*/
-@lightblue : #54C8FF;
-@lightgreen : #2ECC40;
-@lightorange : #FF851B;
-@lightpink : #FF8EDF;
-@lightpurple : #CDC6FF;
-@lightred : #FF695E;
-@lightteal : #6DFFFF;
-@lightyellow : #FFE21F;
+@lightBlue        : #54C8FF;
+@lightGreen       : #2ECC40;
+@lightOrange      : #FF851B;
+@lightPink        : #FF8EDF;
+@lightPurple      : #CDC6FF;
+@lightRed         : #FF695E;
+@lightTeal        : #6DFFFF;
+@lightYellow      : #FFE21F;
 
 @color-success: #5cb85c;
 @color-info: #5bc0de;
@@ -76,50 +75,52 @@
 @color-danger: #d9534f;
 @color-positive: #4990e2;
 
-@checkColor: #a4d9ff;
+@checkColor: #A4d9FF;
 @check-light: rgba(206, 235, 255, 0.6);
-@negative: #ab0936;
-@neutral: #f79f00;
+@negative: #AB0936;
+@neutral: #F79F00;
 
-@h1: floor((@fontSize * 2.3)); // ~36px
-@h2: floor((@fontSize * 2.15)); // ~30px
-@h2: floor((@fontSize * 2.15)); // ~30px
-@h3: ceil((@fontSize * 1.7)); // ~24px
-@h4: ceil((@fontSize * 1.25)); // ~18px
-@h5: @fontSize;
-@h6: ceil((@fontSize * 0.85)); // ~12px
+@h1:            floor((@fontSize * 2.3)); // ~36px
+@h2:            floor((@fontSize * 2.15)); // ~30px
+@h2:            floor((@fontSize * 2.15)); // ~30px
+@h3:            ceil((@fontSize * 1.7)); // ~24px
+@h4:            ceil((@fontSize * 1.25)); // ~18px
+@h5:            @fontSize;
+@h6:            ceil((@fontSize * 0.85)); // ~12px
 
 /*-------------------
         Page
 --------------------*/
 
-@bodybackground : #FCFCFC;
-@fontsize : 14px;
-@headerfontweight : 400;
-@textcolor : rgba(0, 0, 0, 0.8);
+@bodyBackground      : #FCFCFC;
+@fontSize            : 14px;
+@headerfontweight    : @normal;
+@textColor           : rgba(0, 0, 0, 0.8);
 
-@headermargin : 1em 0em 1rem;
-@paragraphmargin : 0em 0em 1em;
+@headerMargin        : 1em 0em 1rem;
+@paragraphMargin     : 0em 0em 1em;
 
-@linkcolor : #009FDA;
-@linkunderline : none;
-@linkhovercolor : lighten( @linkColor, 5);
-@linkhoverunderline : @linkUnderline;
+@linkColor           : #009FDA;
+@linkUnderline       : none;
+@linkHoverColor      : lighten( @linkColor, 5);
+@linkHoverUnderline  : @linkUnderline;
 
-@highlightbackground : #FFFFCC;
-@highlightcolor : @textColor;
+@highlightBackground : #FFFFCC;
+@highlightColor      : @textColor;
+
+
 
 /*-------------------
   Background Colors
 --------------------*/
 
-@subtletransparentblack : rgba(0, 0, 0, 0.03);
-@transparentblack : rgba(0, 0, 0, 0.05);
-@strongtransparentblack : rgba(0, 0, 0, 0.10);
+@subtleTransparentBlack : rgba(0, 0, 0, 0.03);
+@transparentBlack       : rgba(0, 0, 0, 0.05);
+@strongTransparentBlack : rgba(0, 0, 0, 0.10);
 
-@subtletransparentwhite : rgba(255, 255, 255, 0.01);
-@transparentwhite : rgba(255, 255, 255, 0.05);
-@strongtransparentwhite : rgba(255, 255, 255, 0.01);
+@subtleTransparentWhite : rgba(255, 255, 255, 0.01);
+@transparentWhite       : rgba(255, 255, 255, 0.05);
+@strongTransparentWhite : rgba(255, 255, 255, 0.01);
 
 /* Used for differentiating neutrals */
 @subtleGradient: linear-gradient(transparent, rgba(0, 0, 0, 0.05));
@@ -131,7 +132,8 @@
       Borders
 --------------------*/
 
-@bordercolor : rgba(238, 238, 238, 1);
+@borderColor               : rgba(238, 238, 238, 1);
+
 
 /*-------------------
         Grid
@@ -143,21 +145,21 @@
      Breakpoints
 --------------------*/
 
-@mobilebreakpoint : 320px;
-@tabletbreakpoint : 768px;
-@computerbreakpoint : 992px;
-@largemonitorbreakpoint : 1400px;
-@widescreenmonitorbreakpoint : 1900px;
+@mobileBreakpoint            : 320px;
+@tabletBreakpoint            : 768px;
+@computerBreakpoint          : 992px;
+@largeMonitorBreakpoint      : 1400px;
+@widescreenMonitorBreakpoint : 1900px;
 
 /*--------------
    Form Input
 ---------------*/
 
 /* This adjusts the default form input across all elements */
-@inputbackground : @white;
-@inputverticalpadding : @relative11px;
-@inputhorizontalpadding : @relative14px;
-@inputpadding : @inputVerticalPadding @inputHorizontalPadding;
+@inputBackground        : @white;
+@inputVerticalPadding   : @relative11px;
+@inputHorizontalPadding : @relative14px;
+@inputPadding           : @inputVerticalPadding @inputHorizontalPadding;
 
 /* Input Text Color */
 @inputPlaceholderColor: lighten(@inputColor, 50);
