@@ -11,6 +11,7 @@
     "prepublishOnly": "npm run build",
     "start": "npm run storybook",
     "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -c .storybook -o .out",
     "deploy-storybook": "storybook-to-ghpages --remote=storybook --branch=master --output-dir=../storybook-temp"
   },
   "author": "Hugo Nogueira <hugomn@gmail.com>",

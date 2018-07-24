@@ -5,4 +5,6 @@ const Transition = props => {
   return <SUIRTransition {...props} />;
 };
 
+Transition.displayName = "Transition";
+
 export default Transition;
