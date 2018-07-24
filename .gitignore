@@ -7,6 +7,7 @@ docs/src/exampleMenus
 docs/dist/
 .jest-test-results.json
 storybook-static
+.out
 
 # misc
 .DS_Store

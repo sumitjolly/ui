@@ -1,23 +1,26 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { Accordion } from "../../src/components";
-import { Icon } from "@infinitecsolutions/semantic-ui-react";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { Accordion } from '../../src/components';
+import { Icon } from '@infinitecsolutions/semantic-ui-react';
 
 const stories = storiesOf(Accordion.displayName, module);
 
-stories.addWithAddons(Accordion, () => {
-  return  (<Accordion>
-    <Accordion.Title active={false} >
-      <Icon name='dropdown' />
-      How do you acquire a dog?
-    </Accordion.Title>
+stories.addWithAddons(
+  Accordion,
+  () => {
+    return  (
+      <Accordion>
+        <Accordion.Title active>
+          <Icon name='dropdown' />
+          What is a dog?
+        </Accordion.Title>
         <Accordion.Content active>
           <p>
             A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can
             be found as a welcome guest in many households across the world.
           </p>
         </Accordion.Content>
-        <Accordion.Title active={false} >
+        <Accordion.Title active={false}>
           <Icon name='dropdown' />
           How do you acquire a dog?
         </Accordion.Title>
@@ -30,4 +33,10 @@ stories.addWithAddons(Accordion, () => {
         </Accordion.Content>
       </Accordion>
     );
-});
+  },
+  {
+    infoProps: {
+      propTablesExclude: [Accordion.Title, Accordion.Content, Icon],
+    },
+  }
+);
