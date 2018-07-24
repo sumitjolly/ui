@@ -94,7 +94,7 @@
 
 @bodyBackground      : #FCFCFC;
 @fontSize            : 14px;
-@headerfontweight    : @normal;
+@headerFontWeight    : @normal;
 @textColor           : rgba(0, 0, 0, 0.8);
 
 @headerMargin        : 1em 0em 1rem;

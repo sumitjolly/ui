@@ -29,10 +29,6 @@ h2 {
   }
 }
 
-.sub-header h1{
-  margin-bottom: 0!important;
-}
-
 // TODO: Paragraph margins based on previous bootstrap configuration. We need to think if it's really needed
 /*******************************
              Text
