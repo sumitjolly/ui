@@ -1,0 +1,7 @@
+.ui.card.info .content .header {
+  color: #65D9CC;
+}
+
+.ui.card.warning .content .header { 
+  color: #D96583;
+}
