@@ -1,0 +1,22 @@
+/*******************************
+             Card
+*******************************/
+
+/* Card */
+@borderRadius: 0;
+@padding: 0 12px;
+
+/* Shadow */
+@shadowDistance: 0;
+
+/* Header */
+@headerColor: #333;
+@headerFontSize:16px;
+@headerFontWeight: normal;
+
+/* Content */
+@contentPadding: 12px 0;
+@contentFontSize: 24px;
+
+/* Description */
+@descriptionColor: #333;
