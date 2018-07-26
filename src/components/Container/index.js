@@ -3,12 +3,17 @@ import PropTypes from "prop-types";
 import { Container as SUIRContainer } from "@infinitecsolutions/semantic-ui-react";
 
 const Container = props => {
-  return <SUIRContainer {...props} />;
+  let className = props.className || "";
+  className += props.padded ? " padded" : "";
+  return <SUIRContainer {...props} className={className} />;
 };
 
 Container.propTypes = {
   /** Container has no maximum width. */
   fluid: PropTypes.bool,
+
+  /** A Container can have its padding. */
+  padded: PropTypes.bool,
 
   /** Reduce maximum width to more naturally accommodate text. */
   text: PropTypes.bool,

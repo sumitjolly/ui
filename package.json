@@ -1,11 +1,11 @@
 {
   "name": "@infinitecsolutions/ui",
-  "version": "0.2.14",
+  "version": "0.2.21",
   "description": "Infinitec Solutions UI library",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest --json --outputFile=.jest-test-results.json",
-    "build": "rm -rf dist/* && npm run build:css && npm run build:js",
+    "build": "npm run build:css && npm run build:js",
     "build:css": "node scripts/build.css.js",
     "build:js": "rollup --config config/rollup.config.js",
     "prepublishOnly": "npm run build",
@@ -53,6 +53,7 @@
     "less-loader": "^4.1.0",
     "markdown-loader": "^3.0.0",
     "mini-css-extract-plugin": "^0.4.0",
+    "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "regenerator-runtime": "^0.12.0",
@@ -68,8 +69,7 @@
     "webpack-omit-js-for-css-plugin": "^3.1.0"
   },
   "dependencies": {
-    "@infinitecsolutions/semantic-ui-react": "^0.81.1",
-    "prop-types": "^15.6.2"
+    "@infinitecsolutions/semantic-ui-react": "^0.81.1"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
