@@ -5,3 +5,7 @@
 .ui.card.warning .content .header { 
   color: #D96583;
 }
+
+.ui.cards > .card > .content > .header:not(.ui), .ui.card > .content > .header:not(.ui) {
+  margin: 12px 0;
+}
