@@ -3,9 +3,11 @@ import PropTypes from "prop-types";
 import { Container as SUIRContainer } from "@infinitecsolutions/semantic-ui-react";
 
 const Container = props => {
-  let className = props.className || "";
-  className += props.padded ? " padded" : "";
-  return <SUIRContainer {...props} className={className} />;
+  let { className, padded, ...rest } = props;
+  if (padded) {
+    className = (className || "") + " padded";
+  }
+  return <SUIRContainer {...rest} className={className} />;
 };
 
 Container.propTypes = {

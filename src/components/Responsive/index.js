@@ -11,10 +11,10 @@ Responsive.propTypes = {
   fireOnMount: PropTypes.bool,
 
   /** The maximum width at which content will be displayed. */
-  maxWidth: PropTypes.string,
+  maxWidth: PropTypes.number,
 
   /** The minimum width at which content will be displayed. */
-  minWidth: PropTypes.string
+  minWidth: PropTypes.number
 };
 
 Responsive.onlyMobile = SUIRResponsive.onlyMobile;
