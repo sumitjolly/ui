@@ -10,18 +10,14 @@ stories.addWithAddons(
   () => {
     return (
       <Card>
-        <Card.Content header="About Amy" />
-        <Card.Content description="Amy is a violinist with 2 years experience in the wedding industry" />
-        <Card.Content extra>
-          <Icon name="user" />
-          4 Friends
-        </Card.Content>
+        <Card.Content header="YTD CASH IN" />
+        <Card.Content description="99,00" />
       </Card>
     );
   },
   {
     infoProps: {
-      propTablesExclude: [ Card.Content, Icon],
-    },
+      propTablesExclude: [Card.Content, Icon]
+    }
   }
 );
