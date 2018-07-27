@@ -24,10 +24,6 @@
 	transform: rotateZ(180deg);
 }
 
-.ui.dropdown {
-	margin-bottom: 12px;
-}
-
 .ui.disabled.dropdown, .ui.dropdown .menu>.disabled.item {
 	background: @gray-lighter;
 	opacity: 1;
