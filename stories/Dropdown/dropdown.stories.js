@@ -14,5 +14,10 @@ const options = [
 const stories = storiesOf(Dropdown.displayName, module);
 
 stories.addWithAddons(Dropdown, () => (
-  <Dropdown placeholder="Skills" multiple selection search options={options} />
+  <Dropdown
+    placeholder="Skills"
+    options={options}
+    text="Settings"
+    pointing="top right"
+  />
 ));

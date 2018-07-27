@@ -4,7 +4,7 @@
   "description": "Infinitec Solutions UI library",
   "main": "dist/index.js",
   "scripts": {
-    "test": "jest --json --outputFile=.jest-test-results.json",
+    "test": "jest --json --coverage --outputFile=.jest-test-results.json",
     "build": "npm run build:css && npm run build:js",
     "build:css": "node scripts/build.css.js",
     "build:js": "rollup --config config/rollup.config.js",
@@ -75,6 +75,11 @@
   "jest": {
     "coverageDirectory": "./coverage/",
     "collectCoverage": true,
-    "setupTestFrameworkScriptFile": "<rootDir>/tests/index.js"
+    "setupTestFrameworkScriptFile": "<rootDir>/tests/index.js",
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text-summary"
+    ]
   }
 }
