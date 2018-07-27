@@ -1,6 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Dropdown as SUIRDropdown, DropdownItem, DropdownMenu } from "@infinitecsolutions/semantic-ui-react";
+import {
+  Dropdown as SUIRDropdown,
+  DropdownItem,
+  DropdownMenu
+} from "@infinitecsolutions/semantic-ui-react";
 
 const Dropdown = props => {
   return <SUIRDropdown {...props} />;
@@ -10,6 +14,9 @@ Dropdown.Item = DropdownItem;
 Dropdown.Menu = DropdownMenu;
 
 Dropdown.propTypes = {
+  /** A dropdown menu can open to the left or to the right. */
+  direction: PropTypes.oneOf(["left", "right"]),
+
   /** A dropdown can be formatted to appear inline in other content. */
   inline: PropTypes.bool,
 
