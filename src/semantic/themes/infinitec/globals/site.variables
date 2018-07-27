@@ -105,8 +105,8 @@
 @linkHoverColor      : lighten( @linkColor, 5);
 @linkHoverUnderline  : @linkUnderline;
 
-@highlightBackground : #FFFFCC;
-@highlightColor      : @textColor;
+@highlightBackground : @lightPrimaryColor;
+@highlightColor      : @primaryColorText;
 
 
 
