@@ -5,7 +5,7 @@
 /* Card */
 @borderRadius: 0;
 @padding: 0 12px;
-@border: 1px solid #eee;
+@border: 1px solid #EEE;
 @borderShadow: 0;
 
 /* Shadow */
@@ -19,6 +19,7 @@
 /* Content */
 @contentPadding: 8px 0;
 @contentFontSize: 24px;
+@internalBorderColor: #EEE;
 
 /* Description */
 @descriptionColor: #333;
