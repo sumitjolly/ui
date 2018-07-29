@@ -9,18 +9,14 @@
 
 .ui.dropdown> .dropdown.icon:before {
 	content: '\E908';
-	color: @gray-light-2;
 }
 
-.ui.selection.dropdown>.dropdown.icon {
+.ui.dropdown>.dropdown.icon {
 	transition: all 0.2s ease-in-out;
     transform: rotateZ(0deg);
 }
-.ui.selection.dropdown {
-	font-size: 16px;
-}
 
-.ui.active.selection.dropdown > .dropdown.icon {
+.ui.active.dropdown > .dropdown.icon {
 	transform: rotateZ(180deg);
 }
 

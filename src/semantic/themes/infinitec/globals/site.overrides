@@ -45,3 +45,7 @@ p:last-child {
 .ui.toggle.checkbox input:checked ~ label:after {
   background: @primaryColor;
 };
+
+a {
+  transition: color .2s ease-in;
+}

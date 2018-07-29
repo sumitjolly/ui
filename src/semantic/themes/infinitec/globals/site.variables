@@ -100,10 +100,10 @@
 @headerMargin        : 1em 0em 1rem;
 @paragraphMargin     : 0em 0em 1em;
 
-@linkColor           : #009FDA;
+@linkColor           : @primaryColor;
 @linkUnderline       : none;
-@linkHoverColor      : lighten( @linkColor, 5);
-@linkHoverUnderline  : @linkUnderline;
+@linkHoverColor      : darken(@darkPrimaryColor, 10%);
+@linkHoverUnderline  : underline;
 
 @highlightBackground : @lightPrimaryColor;
 @highlightColor      : @primaryColorText;
