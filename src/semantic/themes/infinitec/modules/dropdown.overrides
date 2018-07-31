@@ -30,14 +30,10 @@
   height:auto;
 }
 
-.ui.form .selection.dropdown {
-  font-size: 16px;
-}
-
 .ui.form .selection.dropdown:not(.active) {
   border: 1px solid @gray-lighter;
 }
 
-.ui.dropdown .menu > .item{
-  font-size: 16px;
+.ui.selection.dropdown, .ui.dropdown .menu > .item{
+  font-size: @selectionFontSize;
 }

@@ -138,6 +138,7 @@
 @selectionIconDistance: @inputHorizontalPadding + @glyphWidth;
 @selectionPadding: @selectionVerticalPadding @selectionIconDistance @selectionVerticalPadding @selectionHorizontalPadding;
 @selectionZIndex: 10;
+@selectionFontSize: 16px;
 
 @selectionItemDivider: 1px solid @solidInternalBorderColor;
 @selectionMessagePadding: @selectionItemPadding;
