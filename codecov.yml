@@ -13,7 +13,7 @@ coverage:
       default:
         url: "https://hooks.slack.com/services/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"
         threshold: 0%
-			  only_pulls: false
+	only_pulls: false
         branches: null
         flags: null
-				paths: null
+	paths: null
