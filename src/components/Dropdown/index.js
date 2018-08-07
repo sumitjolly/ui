@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 import {
   Dropdown as SUIRDropdown,
   DropdownItem,
-  DropdownMenu
+  DropdownMenu,
+  DropdownHeader,
+  DropdownDivider,
+  DropdownSearchInput
 } from "@infinitecsolutions/semantic-ui-react";
 
 const Dropdown = props => {
@@ -12,6 +15,9 @@ const Dropdown = props => {
 
 Dropdown.Item = DropdownItem;
 Dropdown.Menu = DropdownMenu;
+Dropdown.Header = DropdownHeader;
+Dropdown.Divider = DropdownDivider;
+Dropdown.SearchInput = DropdownSearchInput;
 
 Dropdown.propTypes = {
   /** A dropdown menu can open to the left or to the right. */
