@@ -51,6 +51,9 @@ Icon.propTypes = {
   /** Icon can be used as a simple loader. */
   loading: PropTypes.bool,
 
+  /** Name of the icon. */
+  name: PropTypes.string,
+
   /** Icon can rotated. */
   rotated: PropTypes.oneOf(["clockwise", "counterclockwise"]),
 
