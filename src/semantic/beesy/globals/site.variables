@@ -1,4 +1,6 @@
-@primaryColor   : #27C2DC;
-@primaryColorText: #0A2463;
-@secondaryColor : #0A2463;
-@secondaryColorText: @white;
+@primaryColor   : #0830eb;
+@primaryColorText: #ffffff;
+@secondaryColor : #ffffff;
+@secondaryColorText: #9b9b9b;
+
+
