@@ -1,2 +1,2 @@
-@mobileGutter: 0px;
+@mobileGutter: 0;
 @paddedContainerPadding: 1.5em;
