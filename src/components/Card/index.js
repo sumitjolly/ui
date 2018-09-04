@@ -2,6 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import {
   Card as SUIRCard,
+  CardHeader,
+  CardDescription,
+  CardMeta,
   CardContent
 } from "@infinitecsolutions/semantic-ui-react";
 
@@ -20,27 +23,17 @@ Card.propTypes = {
   /** A Card can be formatted to take up the width of its container. */
   fluid: PropTypes.bool,
 
-  /** Render as an `a` tag instead of a `div` and adds the href attribute. */
-  href: PropTypes.string,
-
   /** A card can be formatted to link to other content. */
   link: PropTypes.bool,
-
-
-  /**
-   * Called on click. When passed, the component renders as an `a`
-   * tag by default instead of a `div`.
-   *
-   * @param {SyntheticEvent} event - React's original SyntheticEvent.
-   * @param {object} data - All props.
-   */
-  onClick: PropTypes.func,
 
   /** A Card can be formatted to raise above the page. */
   raised: PropTypes.bool,
 }
 
 Card.Content = CardContent;
+Card.Header = CardHeader;
+Card.Description = CardDescription;
+Card.Meta = CardMeta;
 
 Card.displayName = "Card";
 
