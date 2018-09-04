@@ -1,10 +1,3 @@
-.ui.card.info .content .header {
-  color: #65D9CC;
-}
-
-.ui.card.warning .content .header { 
-  color: #D96583;
-}
 
 .ui.cards > .card > .content > .header:not(.ui), .ui.card > .content > .header:not(.ui) {
   margin: 9px  0 13px;
