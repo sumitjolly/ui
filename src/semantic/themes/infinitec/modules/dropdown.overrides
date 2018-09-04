@@ -31,7 +31,7 @@
 }
 
 .ui.form .selection.dropdown:not(.active) {
-  border: 1px solid @gray-lighter;
+  border: 1px solid @gray-light-2;
 }
 
 .ui.selection.dropdown, .ui.dropdown .menu > .item{
