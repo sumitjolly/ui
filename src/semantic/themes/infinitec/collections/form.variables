@@ -25,14 +25,14 @@
 /* Input */
 @inputHorizontalPadding: 0.5em;
 @inputBackground: transparent;
-@inputBorder: 1px solid #EEEEEE;
+@inputBorder: 1px solid @gray-light-2;
 @inputBorderRadius: 0em;
 @inputBoxShadow: none;
 @invertedInputColor: @invertedTextColor;
 
 @textAreaPadding: 1em;
 @textAreaBackground: transparent;
-@textAreaBorder: 1px solid #EEEEEE;
+@textAreaBorder: 1px solid @gray-light-2;
 
 /* Divider */
 @dividerMargin: 1em 0em;

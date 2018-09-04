@@ -7,3 +7,4 @@
 --------------------*/
 
 @transition: none;
+@borderColor: @gray-light-2;

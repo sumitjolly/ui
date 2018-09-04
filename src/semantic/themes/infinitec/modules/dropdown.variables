@@ -159,7 +159,7 @@
 
 @selectionBoxShadow: none;
 @selectionBorderColor: @borderColor;
-@selectionBorder: 1px solid @gray-lighter;
+@selectionBorder: 1px solid @gray-light-2;
 @selectionBorderRadius: @borderRadius;
 
 @selectionIconOpacity: 0.8;
