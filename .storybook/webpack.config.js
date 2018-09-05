@@ -8,7 +8,7 @@ module.exports = {
     rules: [
       {
         oneOf: [
-          getSemanticLessRule("beesy"),
+          getSemanticLessRule("finavi"),
           {
             test: /\.css$/i,
             use: [MiniCssExtractPlugin.loader, "css-loader"]
